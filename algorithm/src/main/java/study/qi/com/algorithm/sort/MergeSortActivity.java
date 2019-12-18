@@ -51,6 +51,7 @@ public class MergeSortActivity extends AppCompatActivity {
     }
 
     private void initEvent() {
+
     }
 
     private void initView() {

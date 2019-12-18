@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.Arrays;
 import java.util.Random;
 
 import qi.com.algorithm.R;
@@ -48,6 +49,7 @@ public class InsertSortActivity extends AppCompatActivity {
         for (int index : mArrays) {
             stringBuilder2.append(index + ",");
         }
+//       Arrays.sort(mArrays);
         stringBuilder2.replace(stringBuilder2.length() - 1, stringBuilder2.length(), "");
         mSortedArray.setText("排序数组:" + stringBuilder2.toString());
     }
@@ -59,7 +61,7 @@ public class InsertSortActivity extends AppCompatActivity {
             int j;
             for (j = i - 1; j >= 0; j--) {
                 if (temp < arrays[j]) {
-                    arrays[j + 1] = arrays[j];
+                    arrays[j + 1] = arrays[j];//
                 } else {
                     break;
                 }
