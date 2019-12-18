@@ -60,14 +60,14 @@ public class MergeSortActivity extends AppCompatActivity {
     }
 
     private void sort(int[] sourceArrays, int left, int right, int[] tempArrays) {
-        if (left < right) {
+        if (left < right) {//left>=right 终止递归
             sort(sourceArrays, left, (left + right) / 2, tempArrays);
             sort(sourceArrays, (left + right) / 2 + 1, right, tempArrays);
             merge(sourceArrays, left, (left + right) / 2, right, tempArrays);
         }
     }
 
-    private void merge(int[] sourceArrays, int left, int middle, int right, int[] tempArrays) {
+    private void merge(int[] sourceArrays, int left, int middle, int right, int[] tempArrays) {//tempArrays可以不定义成全局的，可以定义成局部的[right-left+1]
         int left_start = left;
         int right_start = middle + 1;
         int temp_index = 0;
