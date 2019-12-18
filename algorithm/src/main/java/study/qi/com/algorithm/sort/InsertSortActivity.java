@@ -61,7 +61,7 @@ public class InsertSortActivity extends AppCompatActivity {
             int j;
             for (j = i - 1; j >= 0; j--) {
                 if (temp < arrays[j]) {
-                    arrays[j + 1] = arrays[j];//
+                    arrays[j + 1] = arrays[j];//后移
                 } else {
                     break;
                 }
